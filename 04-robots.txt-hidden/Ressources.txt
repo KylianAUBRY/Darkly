@@ -8,3 +8,8 @@ Ici, on va se pencher sur .hidden : il contient 26 dossiers, qui contiennent cha
 J'ai remarqué que tous les README avaient une taille de 34 octets.
 Ma première idée a été de faire un script pour tous les extraire et ne garder que ceux qui ont une taille différente de 34.
 Bingo ! Nous voilà avec le path trouvé et le flag.
+
+Recommendations :
+- Ne pas exposer de répertoires ou fichiers sensibles dans le fichier robots.txt
+- Éviter de créer une structure de fichiers qui révèle des informations exploitables par leur nom ou leur taille
+- Contrôler l’accès aux fichiers sensibles côté serveur, indépendamment de leur présence dans le code ou la structure de répertoires

@@ -16,4 +16,4 @@ Nous pouvons aussi utiliser l'onglet network des DevTools.
 Recommendations:
 - Ne jamais laisser d’informations sensibles dans les commentaires HTML
 - Supprimer tous les commentaires avant mise en production
-- Vérifier que les données côté client ne permettent pas de contourner la logique de l’application.
+- Vérifier que les données côté client ne permettent pas de contourner la logique de l’application
