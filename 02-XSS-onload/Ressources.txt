@@ -1,0 +1,13 @@
+Dans la page des feedbacks, il est possible de laisser un commentaire.
+En règle générale, on évite d’injecter directement dans le code HTML du site ce que l’utilisateur saisit, afin d’éviter ce genre de faille.
+Ici, le pare-feu a bien fait les choses en bloquant les balises <script> et d’autres similaires.
+Cependant, il oublie de filtrer les balises <svg> avec un attribut onload, ce qui permet d’injecter du JavaScript.
+Dans ce cas, pour déclencher le flag, une simple alert() suffit.
+
+Pour corriger le problème, il existe deux approches :
+
+Supprimer toutes les balises HTML saisies par l’utilisateur.
+
+Ou, plus radicalement, filtrer les caractères spéciaux comme < et > afin d’empêcher toute injection XSS.
+
+Ici, on peut écrire <svg onload=alert(1)>a ou même <svg/onload=alert(1)>a. Le / n’a aucune importance pour le navigateur mais il permet souvent de tromper les filtres. Les deux donnent le flag dans l’exploit.
