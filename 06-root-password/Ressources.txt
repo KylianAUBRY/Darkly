@@ -1,0 +1,9 @@
+Dans le fichier /robots.txt vu dans le 04, on trouve un /whatever qui contient un fichier avec la ligne suivante : root:437394baff5aa33daa618be47b75cb49.
+La chaîne après root: fait un peu penser à celle trouvée dans le 00, dans les cookies.
+Cette suite est encodée en MD5.
+
+En la déchiffrant, on obtient qwerty123@.
+Ainsi, si dans la page /admin je saisis ce nom d'utilisateur et ce mot de passe, j’y accède.
+donc root   et   qwerty123@
+Pour éviter ce problème, il faudrait appliquer la même protection que dans le 04, et surtout éviter de stocker des mots de passe root, même chiffrés, à des emplacements accessibles par l’utilisateur.
+Il serait bien aussi de mettre un mot de passe un peu plus robuste, ça aurait pris cinq minutes maximum à trouver.
