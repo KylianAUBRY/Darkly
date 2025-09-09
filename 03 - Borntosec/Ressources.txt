@@ -1,0 +1,19 @@
+
+Grâce à l'inspection du code HTML de la page BornToSec, on obtient les indices suivants:
+<!--
+You must come from : "https://www.nsa.gov/".
+-->
+<!--
+	Let's use this browser : "ft_bornToSec". It will help you a lot.
+-->
+
+En réalisant le curl suivant, on obtiendra notre flag:
+```
+curl -H "User-Agent: ft_bornToSec" -H "Referer: https://www.nsa.gov/" -H 'Origin: https://www.nsa.gov/' http://10.11.200.231/index.php\?page\=b7e44c7a40c5f80139f0a50f3650fb2bd8d00b0d24667c4c2ca32c88e13b758f | grep flag
+```
+Nous pouvons aussi utiliser l'onglet network des DevTools.
+
+Recommendations:
+- Ne jamais laisser d’informations sensibles dans les commentaires HTML
+- Supprimer tous les commentaires avant mise en production
+- Vérifier que les données côté client ne permettent pas de contourner la logique de l’application.
