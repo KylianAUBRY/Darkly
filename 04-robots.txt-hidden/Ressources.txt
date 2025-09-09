@@ -1,0 +1,10 @@
+Dans le pentesting, le fichier robots.txt est souvent l'une des premières choses que l'on regarde.
+Ce fichier est destiné à indiquer aux moteurs de recherche quelles pages ne doivent pas être indexées.
+Beaucoup de développeurs y mettent des répertoires confidentiels.
+
+Quand on tape /robots.txt, on tombe sur /whatever et /.hidden.
+Ici, on va se pencher sur .hidden : il contient 26 dossiers, qui contiennent chacun 26 dossiers, qui contiennent eux-mêmes 26 dossiers, avec à l'intérieur un fichier README.
+
+J'ai remarqué que tous les README avaient une taille de 34 octets.
+Ma première idée a été de faire un script pour tous les extraire et ne garder que ceux qui ont une taille différente de 34.
+Bingo ! Nous voilà avec le path trouvé et le flag.
