@@ -1,8 +1,0 @@
-En modifiant la valeur d’un champ provenant du menu déroulant de la page survey,
-il est possible d’envoyer au serveur une donnée différente de celles prévues
-par l’application. Cette manipulation permet de contourner la logique
-attendue et de révéler le flag.
-
-Recommandations :
-- Contrôler côté serveur que la valeur reçue fait partie des choix autorisés
-- Rejeter automatiquement toute valeur non prévue par l’application

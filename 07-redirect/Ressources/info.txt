@@ -1,8 +1,0 @@
-Grâce à l'inspection du code HTML du footer de la page d'accueil, nous pouvons
-remarquer que les icônes nous redirigent sur différents sites web. En changeant
-la redirection, nous obtenons le flag.
-
-Recommendations:
-- Valider toutes les redirections côté serveur
-- Ne jamais exposer de liens sensibles modifiables par l’utilisateur
-- Autoriser uniquement les redirections vers des destinations connues et sûres
