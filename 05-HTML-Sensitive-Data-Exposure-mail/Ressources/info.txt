@@ -1,0 +1,9 @@
+Grâce à l'inspection du code HTML de la page Recover password, on peut trouver
+une adresse mail dans le code après avoir cliqué sur "Submit". Il correspond à :
+webmaster@borntosec.com
+En changeant webmaster par root, on obtient le flag.
+
+Recommendations :
+- Ne jamais exposer d’adresses ou identifiants sensibles dans le code HTML
+- Valider côté serveur toutes les actions liées aux utilisateurs et aux adresses mail
+- Interdire toute manipulation manuelle des champs pour obtenir des droits ou des données non prévues

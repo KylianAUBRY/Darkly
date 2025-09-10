@@ -1,0 +1,13 @@
+Grâce à l'inspection des cookies via les DevTools du navigateur :
+Identification du cookie I_am_admin avec la valeur 68934a3e9455fa72420237eb05902327.
+Le format de 32 caractères hexadécimaux est typique d’un hash MD5.
+
+Décryptage du hash MD5 en valeur en clair = false.
+En remplacement de la valeur par true (b326b5062b2f0e69046810717534cb09) et
+en injectant cette nouvelle valeur dans le cookie.
+Lors du rechargement de la page, les droits administrateur sont accordés et le flag révélé.
+
+Recommendations :
+- Ne pas stocker les droits utilisateurs dans les cookies
+- Vérifier les privilèges côté serveur
+- Remplacer MD5 par un algorithme de hachage plus sûra
