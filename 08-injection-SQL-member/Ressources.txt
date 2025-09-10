@@ -90,3 +90,7 @@ Si je décrypte ça en MD5, je tombe sur : FortyTwo
 Je le mets en minuscule : fortytwo
 Ensuite, je l’encrypte en SHA-256 et voilà le flag :
 10a16d834f9b1e4068b25c4c46fe0284e99e44dceaf08098fc83925ba6310ff5
+
+Plusieurs choses peuvent être appliquées. La première, c’est d’empêcher que des données utilisateur deviennent du code. Utilise partout des requêtes paramétrées plutôt que de construire des chaînes SQL à la main.
+Donne à ton compte SQL des droits minimaux (pas de DROP, pas d’ALTER si inutile) et sépare les rôles lecture/écriture. Ne renvoie jamais les messages d’erreur SQL au client.
+Enlever certains caractères peut être une solution radicale, mais elle n’est pas toujours suffisante.
