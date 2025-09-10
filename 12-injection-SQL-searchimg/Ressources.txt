@@ -9,6 +9,7 @@ list_images : id, url, title, comment
 1 union select id, title from list_images
 1 union select id, comment from list_images
 
+On a donc une table comme ça :
 
 id  | url                                       | title     | comment
 

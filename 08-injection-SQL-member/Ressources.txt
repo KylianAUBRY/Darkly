@@ -71,8 +71,7 @@ Je vais donc extraire chaque colonne manuellement avec l’id afin de reconstrui
 1 union select user_id, planet from users
 1 union select user_id, town from users
 
-on a donc une table comme ca : 
-
+On a donc une table comme ça : 
 
 users_id    | Commentaire                               | countersign                       | country   | first_name    | last_name     | planet    | town
 
